@@ -12,3 +12,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'SomethingStrange';
+  src: url('fonts/something-strange.ttf') format('truetype');
+}

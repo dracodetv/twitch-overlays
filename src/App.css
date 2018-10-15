@@ -1,32 +1,55 @@
-.App {
-  text-align: center;
+@keyframes opacity-animation {
+    0% { opacity: 0; }
+    25% { opacity: 0; }
+    55% { opacity: 0; }
+    65% { opacity: 1; }
+    100% { opacity: 1; }
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+@keyframes background-animation {
+    0% { background-position: 0 80px; }
+    25% { background-position: 0 80px; }
+    38% { background-position: 0 330px; }
+    95% { background-position: 0 330px; }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.webcam-border {
+    border: 10px solid #000;
+    border-radius: 4px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.8);
+    height: 281px;
+    bottom: 10px;
+    left: 10px;
+    position: absolute;
+    width: 500px;
 }
 
-.App-link {
-  color: #61dafb;
+.header {
+    background-image: url(images/trickle-bg.png);
+    background-position: 0 80px;
+    background-size: 402px 339px;
+    -webkit-background-clip: text;
+    color: transparent;
+    bottom: 0;
+    font-family: 'SomethingStrange', cursive;
+    font-size: 80px;
+    letter-spacing: 3px;
+    line-height: 1;
+    margin: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+
+    animation-duration: 60s;
+    animation-direction: normal;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-bottom {
+    animation-name: background-animation;
+}
+
+.header-top {
+    animation-name: opacity-animation;
 }
